@@ -1,6 +1,7 @@
 {
   "name": "with-credential-management",
   "alias": "next-credentials.now.sh",
+  "public": true,
   "env": {
     "NODE_ENV": "production"
   }
