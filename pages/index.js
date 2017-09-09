@@ -11,8 +11,10 @@ const avatar =
 export default withAuth(
   class extends Component {
     handleSubmit = event => {
-      event.preventDefault();
-      this.login(event.target);
+      if ('credentials' in navigator) {
+        event.preventDefault();
+        this.login(event.target);
+      }
     };
 
     handleClick = event => {
