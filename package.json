@@ -1,9 +1,12 @@
 {
   "main": "server/index.js",
   "scripts": {
-    "dev": "nodemon . --watch server",
+    "dev": "PORT=8080 nodemon . --watch server",
     "build": "next build",
-    "start": "NODE_ENV=production node ."
+    "start": "NODE_ENV=production node .",
+    "deploy": "now deploy",
+    "postdeploy": "npm run alias",
+    "alias": "now alias"
   },
   "dependencies": {
     "cookie-parser": "^1.4.3",
